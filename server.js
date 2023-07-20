@@ -5,7 +5,8 @@ const app = express()
 var exphbs  = require('express-handlebars');
 var price = 294
 
-const base = "https://api-m.sandbox.paypal.com";
+// const base = "https://api-m.sandbox.paypal.com";
+const base = "https://api-m.paypal.com";
 
 
 require('dotenv').config();
@@ -14,7 +15,7 @@ const {PORT, CLIENT_ID, APP_SECRET } = process.env;
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname, "static")))
+app.use(express.static(path.join(__dirname, "views/images")))
 
 // parse post params sent in body in json format
 app.use(express.json());
