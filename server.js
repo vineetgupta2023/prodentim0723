@@ -26,8 +26,17 @@ app.get('/', (req, res) => {
 
 app.get('/checkout/:code', (req, res) => {
   //res.sendFile(path.join(__dirname, "public/checkout.html"))
-  price = req.params.code
-  res.render('checkout')
+ if(req.params.code==294){
+  pr2 = 594
+ } else if(req.params.code==177){
+  pr2 = 297
+ } else if(req.params.code==69){
+  pr2 = 99
+ }
+  res.render('checkout', {
+    price : req.params.code,
+    retail: pr2
+  })
 })
 
 app.post("/my-server/create-paypal-order", async (req, res) => {
