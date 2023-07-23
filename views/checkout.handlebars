@@ -3,16 +3,26 @@
   src="https://www.paypal.com/sdk/js?client-id=AXxfU7UiCkjWe9y_rA_LSnfo27rh76XnyaaUqcYQG1iPWEOxesot4K-F1RfEV3v0Qwa846wTRqQHJwu2&currency=USD"></script>
 <!-- Set up a container element for the button -->
 <img src="../checkout.png" style="width: 100%;" />
+
+<div style="height: 1px; width:70%; margin:20px; margin-left:auto; margin-right:auto; background-color:#00000028"></div>
+ <!--div class="alert alert-dark" style="width: 800px; margin-left:auto; margin-right:auto; " role="alert">
+  A simple dark alert—check it out!
+</div-->
+
 <div class="container" style="padding-left:80px; padding-right:80px">
   <div class="row">
     <div class="col">
       <div style="width:500px; margin-left:auto; margin-right:auto;">
         <img src="../checkout2.png" style="width:100%;" />
       </div>
-
     </div>
     <div class="col p-3">
       <table>
+        <tr>
+          <th style="width: 100%;">
+            <h5>{{txt}}</h5>
+          </th>
+        </tr>
         <tr>
           <th style="width: 90%;">
             <h4 style="color:red">Retail Price</h4>
@@ -45,12 +55,21 @@
             <h5>$0.00</h5>
           </th>
         </tr>
+        
         <tr>
           <th style="width: 90%;">
             <h5>Tax</h5>
           </th>
           <th>
             <h5>$0.00</h5>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <hr>
+          </th>
+          <th>
+            <hr>
           </th>
         </tr>
         <tr>

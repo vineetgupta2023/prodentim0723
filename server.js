@@ -28,14 +28,18 @@ app.get('/checkout/:code', (req, res) => {
   //res.sendFile(path.join(__dirname, "public/checkout.html"))
  if(req.params.code==294){
   pr2 = 594
+  txt = "ProDentim - 6 Bottles + 2 Free Ebooks"
  } else if(req.params.code==177){
   pr2 = 297
+  txt = "ProDentim - 3 Bottles + 2 Free Ebooks"
  } else if(req.params.code==69){
   pr2 = 99
+  txt = "ProDentim - 1 Bottle"
  }
   res.render('checkout', {
     price : req.params.code,
-    retail: pr2
+    retail: pr2,
+    txt
   })
 })
 
